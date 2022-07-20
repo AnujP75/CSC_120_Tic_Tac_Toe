@@ -19,8 +19,124 @@ def board():
     print(bottomRow)
     
 def checkWin():
-    return "false"
-    
+    if (topRow[0] == "X") and (topRow[1] == "X") and (topRow[2] == "X"):
+      if turn%2 == 1:
+        print("Player1 Won!")
+        return "true"
+      elif turn%2 == 0:
+        print("Player2 Won!")
+        return "true"
+    elif (middleRow[0] == "X") and (middleRow[1] == "X") and (middleRow[2] == "X"):
+      if turn%2 == 1:
+        print("Player1 Won!")
+        return "true"
+      elif turn%2 == 0:
+        print("Player2 Won!")
+        return "true"
+    elif (bottomRow[0] == "X") and (bottomRow[1] == "X") and (bottomRow[2] == "X"):
+      if turn%2 == 1:
+        print("Player1 Won!")
+        return "true"
+      elif turn%2 == 0:
+        print("Player2 Won!")
+        return "true"
+    elif (topRow[0] == "X") and (middleRow[0] == "X") and (bottomRow[0] == "X"):
+      if turn%2 == 1:
+        print("Player1 Won!")
+        return "true"
+      elif turn%2 == 0:
+        print("Player2 Won!")
+        return "true"
+    elif (topRow[1] == "X") and (middleRow[1] == "X") and (bottomRow[1] == "X"):
+      if turn%2 == 1:
+        print("Player1 Won!")
+        return ""
+      elif turn%2 == 0:
+        print("Player2 Won!")
+        return ""
+    elif (topRow[2] == "X") and (middleRow[2] == "X") and (bottomRow[2] == "X"):
+      if turn%2 == 1:
+        print("Player1 Won!")
+        return ""
+      elif turn%2 == 0:
+        print("Player2 Won!")
+        return ""
+    elif (topRow[0] == "X") and (middleRow[1] == "X") and (bottomRow[2] == "X"):
+      if turn%2 == 1:
+        print("Player1 Won!")
+        return ""
+      elif turn%2 == 0:
+        print("Player2 Won!")
+        return ""
+    elif (topRow[2] == "X") and (middleRow[1] == "X") and (bottomRow[0] == "X"):
+      if turn%2 == 1:
+        print("Player1 Won!")
+        return ""
+      elif turn%2 == 0:
+        print("Player2 Won!")
+        return ""
+    elif (topRow[0] == "O") and (topRow[1] == "O") and (topRow[2] == "O"):
+      if turn%2 == 1:
+        print("Player1 Won!")
+        return ""
+      elif turn%2 == 0:
+        print("Player2 Won!")
+        return ""
+    elif (middleRow[0] == "O") and (middleRow[1] == "O") and (middleRow[2] == "O"):
+      if turn%2 == 1:
+        print("Player1 Won!")
+        return ""
+      elif turn%2 == 0:
+        print("Player2 Won!")
+        return ""
+    elif (bottomRow[0] == "O") and (bottomRow[1] == "O") and (bottomRow[2] == "O"):
+      if turn%2 == 1:
+        print("Player1 Won!")
+        return ""
+      elif turn%2 == 0:
+        print("Player2 Won!")
+        return ""
+    elif (topRow[0] == "O") and (middleRow[0] == "O") and (bottomRow[0] == "O"):
+      if turn%2 == 1:
+        print("Player1 Won!")
+        return ""
+      elif turn%2 == 0:
+        print("Player2 Won!")
+        return ""
+    elif (topRow[1] == "O") and (middleRow[1] == "O") and (bottomRow[1] == "O"):
+      if turn%2 == 1:
+        print("Player1 Won!")
+        return ""
+      elif turn%2 == 0:
+        print("Player2 Won!")
+        return ""
+    elif (topRow[2] == "O") and (middleRow[2] == "O") and (bottomRow[2] == "O"):
+      if turn%2 == 1:
+        print("Player1 Won!")
+        return ""
+      elif turn%2 == 0:
+        print("Player2 Won!")
+        return ""
+    elif (topRow[0] == "O") and (middleRow[1] == "O") and (bottomRow[2] == "O"):
+      if turn%2 == 1:
+        print("Player1 Won!")
+        return ""
+      elif turn%2 == 0:
+        print("Player2 Won!")
+        return ""
+    elif (topRow[2] == "O") and (middleRow[1] == "O") and (bottomRow[0] == "O"):
+      if turn%2 == 1:
+        print("Player1 Won!")
+        return ""
+      elif turn%2 == 0:
+        print("Player2 Won!")
+        return ""
+    elif (topRow[0] != "-") and (topRow[1] != "-") and (topRow[2] != "-") and (middleRow[0] != "-") and (middleRow[1] != "-") and (middleRow[2] != "-") and (bottomRow[0] != "-") and (bottomRow[1] != "-") and (bottomRow[2] != "-"):
+      print("Nobody Wins! There is a draw.")
+      return ""
+    else:
+      return "false"
+
 def placeMark():
     row = ""
     column = ""
@@ -91,3 +207,5 @@ while checkWin() == "false":
         print("Player2 turn: ")
         placeMark()
         board()
+
+checkWin()
